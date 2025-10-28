@@ -5,6 +5,7 @@ const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose')
 
 const indexRouter = require('./routes/index')
+const authorsRouter = require('./routes/authors')
 
 require('dotenv').config();
 
@@ -28,6 +29,7 @@ app.use(express.static('public'));
 
 
 app.use('/', indexRouter)
+app.use('/authors', authorsRouter)
 
 app.listen(process.env.PORT || 3000, () => {
     console.log("server running on port: 3000")

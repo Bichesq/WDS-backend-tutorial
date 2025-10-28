@@ -3,7 +3,7 @@ const router = express.Router();
 
 // All authors
 router.get('/', (req, res) => {
-    res.render('authos/index');
+    res.render('authors/index');
 })
 
 //New authors   
