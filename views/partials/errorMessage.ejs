@@ -1,1 +1,6 @@
-<%= errorMessage %>
+<% if (locals.errorMessage != null) { %>
+    <%= errorMessage %> 
+<% } %>
+
+<!-- <%= typeof errorMessage !== 'undefined' ? errorMessage : '' %> -->
+
