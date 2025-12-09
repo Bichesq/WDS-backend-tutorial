@@ -1,5 +1,9 @@
 <h1>New Authors</h1>
 
+<% if (typeof errorMessage !== 'undefined') { %>
+    <p class="error"><%= errorMessage %></p>
+<% } %>
+
 <form action="/authors/new" method="POST">
     <%- include("./_form_fields") %>
     <a href="/authors">Cancel</a>

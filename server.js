@@ -26,7 +26,10 @@ app.set('views', __dirname + '/views');
 app.set('layout', 'layouts/layout');
 app.use(expressLayouts);
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({limit: '10mb', extended: false}));
+app.use(express.json());        // For JSON bodies
+app.use(express.urlencoded({ extended: true })); // For form data
+// app.use(bodyParser.json({ limit: '10mb' })) 
+// app.use(bodyParser.urlencoded({limit: '10mb', extended: false}));
 
 
 
